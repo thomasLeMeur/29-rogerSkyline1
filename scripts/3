@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -z $1 ]; then
+	echo "The directory path argument is missing"
+else
+	du -a $1 | sort -hr
+fi

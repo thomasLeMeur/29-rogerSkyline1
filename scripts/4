@@ -1,0 +1,13 @@
+#!/bin/sh
+
+file=/root/4
+
+old=`tail -n 1 $file`
+new="#"`md5sum /etc/crontab | cut -d ' ' -f 1`
+if [ $old != $new ] ; then
+	echo $new >>$file
+	echo "Crontab has changed" | mail root -s "Crontab update"
+fi
+
+#/etc/crontab
+#8f111d100ea459f68d333d63a8ef2205

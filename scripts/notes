@@ -1,0 +1,4 @@
+crontab -e
+
+pour 02, modifier le crontab en root avec : 0 4 * * * /root/2
+pour 04, modifier le crontab en root avec : 0 0 * * * /root/1
